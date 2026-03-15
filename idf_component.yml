@@ -1,0 +1,5 @@
+version: "1.0.0"
+targets:
+  - esp32p4
+dependencies:
+  idf: ">=5.0"
