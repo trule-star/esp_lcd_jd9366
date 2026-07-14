@@ -5,4 +5,4 @@ license: MIT
 targets:
 - esp32p4
 url: https://github.com/trule-star/esp_lcd_jd9366
-version: 1.0.0
+version: 1.0.1
