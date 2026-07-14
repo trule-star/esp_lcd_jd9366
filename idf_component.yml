@@ -1,8 +1,8 @@
-version: "1.0.0"
-description: "ESP-IDF component for driving JD9366 MIPI-DSI/DPI LCD displays."
-url: "https://github.com/trule-star/esp_lcd_jd9366"
-targets:
-  - esp32p4
 dependencies:
-  idf: ">=5.0"
-  
+  idf: '>=5.0'
+description: ESP-IDF component for driving JD9366 MIPI-DSI/DPI LCD displays.
+license: MIT
+targets:
+- esp32p4
+url: https://github.com/trule-star/esp_lcd_jd9366
+version: 1.0.0

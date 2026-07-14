@@ -43,6 +43,7 @@ typedef struct {
     struct {
         esp_lcd_dsi_bus_handle_t dsi_bus;               /*!< MIPI-DSI bus configuration */
         const esp_lcd_dpi_panel_config_t *dpi_config;   /*!< MIPI-DPI panel configuration */
+        uint8_t  lane_num;                              /*!< Number of MIPI-DSI lanes, defaults to 2 if set to 0 */
     } mipi_config;
 } jd9366_vendor_config_t;
 
@@ -99,10 +100,10 @@ esp_err_t esp_lcd_new_panel_jd9366(const esp_lcd_panel_io_handle_t io, const esp
  */
 #define JD9366_800_1280_PANEL_60HZ_DPI_CONFIG(px_format) \
     {                                                    \
+        .virtual_channel = 0,                            \
         .dpi_clk_src = MIPI_DSI_DPI_CLK_SRC_DEFAULT,     \
         .dpi_clock_freq_mhz = 78,                        \
-        .virtual_channel = 0,                            \
-        .pixel_format = px_format,                       \
+        .in_color_format=px_format,                       \
         .num_fbs = 1,                                    \
         .video_timing = {                                \
             .h_size = 800,                              \

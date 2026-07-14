@@ -16,3 +16,4 @@ releases/
 *.bin
 mmap_generate_*.h
 .clangd
+.github/
